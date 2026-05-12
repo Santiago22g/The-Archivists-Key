@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mx6yc1x04x8o"
+path="res://.godot/imported/Darkened_Corridor_Loop_no_creaks.ogg-5169d34b656180b059d42f5d381792b6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/ModernLibrary/House of Tension – Music & SFX Pack/ogg_loop/Darkened_Corridor_Loop_no_creaks.ogg"
+dest_files=["res://.godot/imported/Darkened_Corridor_Loop_no_creaks.ogg-5169d34b656180b059d42f5d381792b6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

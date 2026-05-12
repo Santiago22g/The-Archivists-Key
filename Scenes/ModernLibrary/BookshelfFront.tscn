@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dua24qk8f7vr3"]
+
+[ext_resource type="Texture2D" uid="uid://b40fryhabty6g" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="1_hr00x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxxrp"]
+atlas = ExtResource("1_hr00x")
+region = Rect2(31.851643, 63.46929, 48.335835, 48.876526)
+
+[node name="Bookshelf" type="Node2D" unique_id=1045508662]
+
+[node name="SpriteShelf" type="Sprite2D" parent="." unique_id=408950437]
+texture_filter = 1
+position = Vector2(46.653877, 61.375004)
+scale = Vector2(4.806088, 2.807292)
+texture = SubResource("AtlasTexture_hxxrp")

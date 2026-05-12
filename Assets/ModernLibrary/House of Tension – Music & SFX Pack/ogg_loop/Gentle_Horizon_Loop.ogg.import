@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dec23q7fnudug"
+path="res://.godot/imported/Gentle_Horizon_Loop.ogg-ab00df7870e476df25035061f56ff3fe.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/ModernLibrary/House of Tension – Music & SFX Pack/ogg_loop/Gentle_Horizon_Loop.ogg"
+dest_files=["res://.godot/imported/Gentle_Horizon_Loop.ogg-ab00df7870e476df25035061f56ff3fe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
