@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://djj858ar15wwi"]
+
+[ext_resource type="PackedScene" uid="uid://xttuwl6t83rw" path="res://Scenes/Rooms/TheRepublic.tscn" id="1_ja0jr"]
+[ext_resource type="PackedScene" uid="uid://tansi7lwptop" path="res://Scenes/main_character.tscn" id="2_2p8gi"]
+[ext_resource type="AudioStream" uid="uid://mu15ou3i145a" path="res://Assets/The Republic/Echoes in the Cavern.mp3" id="2_ogcst"]
+[ext_resource type="Script" uid="uid://dt22uc6f7afku" path="res://Scenes/Rooms/pointlight.gd" id="4_ogcst"]
+
+[node name="RepublicMainScene" type="Node2D" unique_id=2132671522]
+
+[node name="TheRepublic" parent="." unique_id=572536096 instance=ExtResource("1_ja0jr")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1210797339]
+stream = ExtResource("2_ogcst")
+autoplay = true
+
+[node name="MainCharacter" parent="." unique_id=1165652071 instance=ExtResource("2_2p8gi")]
+position = Vector2(353.00003, 161.00002)
+scale = Vector2(0.635, 0.635)
+
+[node name="PointLight2D" type="PointLight2D" parent="MainCharacter" unique_id=1198471792]
+position = Vector2(-3.1496544, -14.173252)
+energy = 1.5
+shadow_enabled = true
+script = ExtResource("4_ogcst")
