@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1uedlk5bsvk0"]
 
 [ext_resource type="Texture2D" uid="uid://bpxaiif3rnsfw" path="res://Assets/MainCharacter/Top-down Character (32x32, idle-run).png" id="1_0eyao"]
-[ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_11o2n"]
+[ext_resource type="Script" uid="uid://dsgllapnedgxi" path="res://Scripts/main_character.gd" id="1_11o2n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11o2n"]
 atlas = ExtResource("1_0eyao")
@@ -593,7 +593,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"up-idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -711,9 +711,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0x2o"]
-radius = 30.0
-height = 78.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11o2n"]
+size = Vector2(46, 29)
 
 [node name="MainCharacter" type="CharacterBody2D" unique_id=1165652071]
 position = Vector2(5, -2)
@@ -725,9 +724,9 @@ texture_filter = 1
 position = Vector2(-0.9999962, -48.000004)
 scale = Vector2(3.1875, 3.1249998)
 sprite_frames = SubResource("SpriteFrames_xu0l2")
-animation = &"up-walk"
-frame_progress = 0.20864627
+animation = &"up-left-idle"
+autoplay = "down-idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=20747155]
-position = Vector2(0, -37)
-shape = SubResource("CapsuleShape2D_f0x2o")
+position = Vector2(-1, -14.5)
+shape = SubResource("RectangleShape2D_11o2n")

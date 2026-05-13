@@ -6,10 +6,17 @@
 atlas = ExtResource("1_hr00x")
 region = Rect2(31.851643, 63.46929, 48.335835, 48.876526)
 
-[node name="Bookshelf" type="Node2D" unique_id=1045508662]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr00x"]
+size = Vector2(214, 119)
+
+[node name="Bookshelf" type="StaticBody2D" unique_id=1776192415]
 
 [node name="SpriteShelf" type="Sprite2D" parent="." unique_id=408950437]
 texture_filter = 1
 position = Vector2(46.653877, 61.375004)
 scale = Vector2(4.806088, 2.807292)
 texture = SubResource("AtlasTexture_hxxrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2106629978]
+position = Vector2(49, 58.5)
+shape = SubResource("RectangleShape2D_hr00x")

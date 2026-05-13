@@ -15,4 +15,5 @@ stream = ExtResource("2_nrwik")
 autoplay = true
 
 [node name="MainCharacter" parent="." unique_id=1165652071 instance=ExtResource("3_076s1")]
+z_index = 1
 position = Vector2(343, 441)
