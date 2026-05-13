@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ck7x3ad7ude5e"]
+
+[ext_resource type="Texture2D" uid="uid://dpj1rbp1fmog4" path="res://Assets/Bed.png" id="1_vbg5g"]
+
+[node name="Bed" type="Node2D" unique_id=1473259145]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1921344637]
+scale = Vector2(1.31, 1.31)
+texture = ExtResource("1_vbg5g")

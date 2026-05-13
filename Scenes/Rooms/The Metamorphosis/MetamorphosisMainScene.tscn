@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cysdahubeg3la"]
+
+[ext_resource type="PackedScene" uid="uid://idbpbdfd8pnj" path="res://Scenes/Rooms/The Metamorphosis/TheMetamorphosis.tscn" id="1_kgk7h"]
+[ext_resource type="PackedScene" uid="uid://tansi7lwptop" path="res://Scenes/main_character.tscn" id="2_cmqni"]
+
+[node name="MetamorphosisMainScene" type="Node2D" unique_id=2017324270]
+
+[node name="TheMetamorphosis" parent="." unique_id=1621232550 instance=ExtResource("1_kgk7h")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=238514949]
+
+[node name="MainCharacter" parent="." unique_id=1165652071 instance=ExtResource("2_cmqni")]
+position = Vector2(426, 405)
+scale = Vector2(0.54, 0.54)
+speed = 150.0

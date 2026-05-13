@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://djj858ar15wwi"]
 
-[ext_resource type="PackedScene" uid="uid://xttuwl6t83rw" path="res://Scenes/Rooms/TheRepublic.tscn" id="1_ja0jr"]
+[ext_resource type="PackedScene" uid="uid://xttuwl6t83rw" path="res://Scenes/Rooms/The Republic/TheRepublic.tscn" id="1_ja0jr"]
 [ext_resource type="PackedScene" uid="uid://tansi7lwptop" path="res://Scenes/main_character.tscn" id="2_2p8gi"]
 [ext_resource type="AudioStream" uid="uid://mu15ou3i145a" path="res://Assets/The Republic/Echoes in the Cavern.mp3" id="2_ogcst"]
-[ext_resource type="Script" uid="uid://dt22uc6f7afku" path="res://Scenes/Rooms/pointlight.gd" id="4_ogcst"]
+[ext_resource type="Script" uid="uid://dt22uc6f7afku" path="res://Scripts/pointlight.gd" id="4_ogcst"]
 
 [node name="RepublicMainScene" type="Node2D" unique_id=2132671522]
 

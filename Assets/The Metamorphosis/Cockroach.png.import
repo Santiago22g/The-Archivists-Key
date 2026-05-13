@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0bjer2uasb8l"
-path="res://.godot/imported/prisoner1.png-329360f0c167d3756f280ed099c2a1b7.ctex"
+uid="uid://omjfe6vfhmtn"
+path="res://.godot/imported/Cockroach.png-b7f1f7f717aba5b29ddd13d966aaae4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/The Republic/prisoner1.png"
-dest_files=["res://.godot/imported/prisoner1.png-329360f0c167d3756f280ed099c2a1b7.ctex"]
+source_file="res://Assets/The Metamorphosis/Cockroach.png"
+dest_files=["res://.godot/imported/Cockroach.png-b7f1f7f717aba5b29ddd13d966aaae4a.ctex"]
 
 [params]
 
