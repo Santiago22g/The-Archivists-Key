@@ -14,9 +14,21 @@ config/name="The-Archivists-Key"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*uid://c3rodes2l3gxb"
+
 [display]
 
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Dialogues/prueba.dialogue")
 
 [physics]
 

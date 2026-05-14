@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://d0k4s5k57x22i"]
 
+[ext_resource type="Script" uid="uid://cm1lbfnljle4s" path="res://Scripts/Library/main_scene_library.gd" id="1_a26cm"]
 [ext_resource type="PackedScene" uid="uid://bs3qattyf7say" path="res://Scenes/ModernLibrary/Library.tscn" id="1_nrpmx"]
 [ext_resource type="AudioStream" uid="uid://b8t4ihlleni2u" path="res://Assets/ModernLibrary/House of Tension – Music & SFX Pack/ogg_loop/Sad_Reflection_Loop.ogg" id="2_nrwik"]
-[ext_resource type="PackedScene" uid="uid://tansi7lwptop" path="res://Scenes/main_character.tscn" id="3_076s1"]
+[ext_resource type="PackedScene" uid="uid://b1uedlk5bsvk0" path="res://Scenes/main_character.tscn" id="3_076s1"]
 
 [node name="MainSceneLibrary" type="Node2D" unique_id=1506026127]
 y_sort_enabled = true
+script = ExtResource("1_a26cm")
 
 [node name="Library" parent="." unique_id=72035892 instance=ExtResource("1_nrpmx")]
-position = Vector2(28, 6)
+position = Vector2(1, -4)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1921098671]
 stream = ExtResource("2_nrwik")
@@ -17,3 +19,4 @@ autoplay = true
 [node name="MainCharacter" parent="." unique_id=1165652071 instance=ExtResource("3_076s1")]
 z_index = 1
 position = Vector2(343, 441)
+collision_layer = 2
