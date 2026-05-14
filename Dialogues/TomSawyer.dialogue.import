@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cq1fnaxnewpc6"
+path="res://.godot/imported/TomSawyer.dialogue-149f53ea1c20d7677bb3a258563bc7f2.tres"
+
+[deps]
+
+source_file="res://Dialogues/TomSawyer.dialogue"
+dest_files=["res://.godot/imported/TomSawyer.dialogue-149f53ea1c20d7677bb3a258563bc7f2.tres"]
+
+[params]
+
+defaults=true

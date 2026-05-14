@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bappx5w1eii6r"
+path="res://.godot/imported/Cockroach.dialogue-4fec75489c067526ddfaad9c14f20397.tres"
+
+[deps]
+
+source_file="res://Dialogues/Cockroach.dialogue"
+dest_files=["res://.godot/imported/Cockroach.dialogue-4fec75489c067526ddfaad9c14f20397.tres"]
+
+[params]
+
+defaults=true

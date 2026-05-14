@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bmsfbnkgahjw4"]
+
+[ext_resource type="Texture2D" uid="uid://c6gpecxdad1c0" path="res://Assets/The Republic/Clown_Sprite.png" id="1_5jkrd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bmnr"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmo1r"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yci6a"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m70q6"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02cpy"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fndy"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hei2p"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8uva"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dewr1"]
+atlas = ExtResource("1_5jkrd")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3oj1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bmnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmo1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yci6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m70q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02cpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fndy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hei2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8uva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dewr1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pjr"]
+radius = 18.0
+height = 48.0
+
+[node name="Clown" type="CharacterBody2D" unique_id=802106245]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1095881722]
+scale = Vector2(2.005, 2.005)
+sprite_frames = SubResource("SpriteFrames_3oj1h")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=897049042]
+shape = SubResource("CapsuleShape2D_i3pjr")

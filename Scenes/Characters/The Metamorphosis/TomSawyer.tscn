@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dil3jnadfjcll"]
+
+[ext_resource type="Texture2D" uid="uid://bw31k0xf1bw5t" path="res://Assets/The Metamorphosis/farmer_spritesheet.png" id="1_gba7d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxb33"]
+atlas = ExtResource("1_gba7d")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg6k0"]
+atlas = ExtResource("1_gba7d")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2p5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxb33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg6k0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxb33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg6k0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gba7d"]
+radius = 13.0
+height = 50.0
+
+[node name="TomSawyer" type="CharacterBody2D" unique_id=1907196645]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1252577788]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_j2p5u")
+autoplay = "default"
+frame_progress = 0.25925192
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1060503295]
+shape = SubResource("CapsuleShape2D_gba7d")

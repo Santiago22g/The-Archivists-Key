@@ -3,7 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://xttuwl6t83rw" path="res://Scenes/Rooms/The Republic/TheRepublic.tscn" id="1_ja0jr"]
 [ext_resource type="PackedScene" uid="uid://b1uedlk5bsvk0" path="res://Scenes/main_character.tscn" id="2_2p8gi"]
 [ext_resource type="AudioStream" uid="uid://mu15ou3i145a" path="res://Assets/The Republic/Echoes in the Cavern.mp3" id="2_ogcst"]
-[ext_resource type="Script" uid="uid://dt22uc6f7afku" path="res://Scripts/pointlight.gd" id="4_ogcst"]
+
+[sub_resource type="Gradient" id="Gradient_i0a3f"]
+offsets = PackedFloat32Array(0, 0.6927711)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2prhs"]
+gradient = SubResource("Gradient_i0a3f")
+fill = 1
+fill_from = Vector2(0.47826087, 0.49130434)
+fill_to = Vector2(1, 1)
 
 [node name="RepublicMainScene" type="Node2D" unique_id=2132671522]
 
@@ -18,7 +27,8 @@ position = Vector2(353.00003, 161.00002)
 scale = Vector2(0.635, 0.635)
 
 [node name="PointLight2D" type="PointLight2D" parent="MainCharacter" unique_id=1198471792]
-position = Vector2(-3.1496544, -14.173252)
+position = Vector2(3.1495533, -31.496096)
+scale = Vector2(3.8139775, 3.8877954)
 energy = 1.5
 shadow_enabled = true
-script = ExtResource("4_ogcst")
+texture = SubResource("GradientTexture2D_2prhs")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://vctslbbr3e5l"
+path="res://.godot/imported/Descartes.dialogue-f243c3b11800f55c1da5feb1631108b7.tres"
+
+[deps]
+
+source_file="res://Dialogues/Descartes.dialogue"
+dest_files=["res://.godot/imported/Descartes.dialogue-f243c3b11800f55c1da5feb1631108b7.tres"]
+
+[params]
+
+defaults=true

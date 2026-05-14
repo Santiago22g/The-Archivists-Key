@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dnt44wp67vay1"
+path="res://.godot/imported/Clown.dialogue-14d85979d448c289c1f22645933c9678.tres"
+
+[deps]
+
+source_file="res://Dialogues/Clown.dialogue"
+dest_files=["res://.godot/imported/Clown.dialogue-14d85979d448c289c1f22645933c9678.tres"]
+
+[params]
+
+defaults=true
