@@ -1,0 +1,27 @@
+~ start
+Boy: Many eyes wander these sands, yet few truly perceive the design of life.
+Girl: The Blue Bird does not seek just any shadow... it seeks the purity of those who belong to this archipelago.
+Boy: In the "Origin," the seeker did not count the accidental visitors, but the inhabitants molded by time upon these very rocks.
+
+- How must I look? (Hint)
+	Boy: Watch those who cannot fly away, those who bathe in the cold currents, and those who crawl beneath the equatorial sun.
+	Girl: The revelation lies in the sum of their unique lineage.
+	=> END
+
+- I have the number.
+	Girl: Tell us then... how many unique lineages truly belong to the "Origin"?
+	- It's 3.
+		Boy: No... the tides do not recognize that number. The boat remains anchored.
+		=> END
+	- It's 4.
+		Girl: Correct. The lineage is complete.
+		Boy: Look to the shore... the engine of the "Origin" is breathing again.
+		do setTrue()
+		=> END
+	- It's 5.
+		Girl: You count ghosts and guests. The sea is not fooled.
+		=> END
+
+- I understand.
+	Boy: Then seek the truth among the stones.
+	=> END

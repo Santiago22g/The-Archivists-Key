@@ -1,0 +1,39 @@
+~ start_hermit
+if mission_state == "start":
+	Hermit: Halt! The Temple of Wisdom is forbidden. A "Wooden Cyclops" guards the path.
+	Hermit: My old pirate crew tried to pass, but their souls were trapped in that Black Horse down the road. 
+	Hermit: Talk to the beast if you dare... maybe it still carries their final message.
+	set mission_state = "talked_to_hermit"
+elif mission_state == "talked_to_hermit":
+	Hermit: I told you! Go talk to the Black Horse. It holds the key to the Cyclops' nature.
+elif mission_state == "read_note":
+	Hermit: Why are you still here? Face the beast on the hill!
+=> END
+
+~ horse_note
+Narrator: You find a dusty note attached to the horse's saddle.
+Narrator: "The Giant of the North is a lie. It has no eyes, only four wings of cloth that grind the bones of the foolish."
+Narrator: "Is it a Cyclops? Or a Machine of the Gods? Count its limbs and you shall pass."
+set mission_state = "read_note"
+=> END
+~ babieca_talk
+Narrator: The white horse stares at you with a ghostly gaze.
+Babieca: Stop, traveler. Even my master, El Cid, could not bleed that monster with his sword Tizona.
+Babieca: Its four wooden arms shattered our shields. Steel is useless against what has no heart.
+Babieca: Use your mind. Count its limbs and face the truth before it's too late.
+
+=> END
+~ ship
+Me: The Black Mark ship... the Hermit was right, it's destroyed.
+
+=> END
+~ giant_shout
+Hermit: (Shouting from the distance) BEWARE! You are facing the Cyclops now! 
+Hermit: Tell me, lad! How many limbs does that monster have?
+
+- It has 2 limbs.
+	Hermit: Fool! The monster will crush you! Try again!
+	=> END
+- It has 4 wooden arms.
+	Hermit: That's it! You've broken the enchantment! The path is yours!
+	=> END

@@ -45,3 +45,5 @@ func get_direction_string(dir: Vector2) -> String:
 		return dir_name
 	else:
 		return x_name
+
+	

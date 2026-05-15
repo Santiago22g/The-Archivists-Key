@@ -1,0 +1,20 @@
+~ start
+Hyena: Hehehe! Look at this, boys... a "man-cub" wandering where the shadows don't reach.
+Hyena: You look skinny, traveler. Not even enough meat on those bones to make a decent stew for the pack!
+Hyena: Are you lost? Or just looking for someone to laugh at your misery? Hehehe!
+
+- I'm looking for the inhabitants.
+	Hyena: Inhabitants? You mean the "VIPs" of this rock? 
+	Hyena: Keep looking, little morsel. I'm just here for the leftovers. 
+	Hyena: I don't "belong" to any census, and I certainly don't take orders from a lighthouse.
+	=> END
+
+- Why so much laughing?
+	Hyena: Because life is a joke, and you’re the punchline! 
+	Hyena: Now run along before I decide you look better as a snack than as a conversation partner.
+	=> END
+
+- Leave me alone, scavenger.
+	Hyena: Ooh, "scavenger"! Someone’s been reading the dictionary. 
+	Hyena: Go on, keep your secrets. The desert knows how to keep them better than you.
+	=> END

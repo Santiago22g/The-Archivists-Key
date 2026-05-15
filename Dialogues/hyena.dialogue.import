@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvo2af6unfbon"
+path="res://.godot/imported/hyena.dialogue-db8f46838f98fd07af06b1e6092d6c97.tres"
+
+[deps]
+
+source_file="res://Dialogues/hyena.dialogue"
+dest_files=["res://.godot/imported/hyena.dialogue-db8f46838f98fd07af06b1e6092d6c97.tres"]
+
+[params]
+
+defaults=true
