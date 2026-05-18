@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://idbpbdfd8pnj" path="res://Scenes/Rooms/The Metamorphosis/TheMetamorphosis.tscn" id="1_kgk7h"]
 [ext_resource type="PackedScene" uid="uid://b1uedlk5bsvk0" path="res://Scenes/main_character.tscn" id="2_cmqni"]
-[ext_resource type="PackedScene" uid="uid://d124hymrop0i5" path="res://Scenes/Characters/The Metamorphosis/Blind.tscn" id="3_cmqni"]
-[ext_resource type="PackedScene" uid="uid://dil3jnadfjcll" path="res://Scenes/Characters/The Metamorphosis/TomSawyer.tscn" id="4_ys1xa"]
 
 [node name="MetamorphosisMainScene" type="Node2D" unique_id=2017324270]
 
@@ -15,9 +13,3 @@
 position = Vector2(426, 405)
 scale = Vector2(0.54, 0.54)
 speed = 150.0
-
-[node name="Blind" parent="." unique_id=2026688956 instance=ExtResource("3_cmqni")]
-position = Vector2(257, 228)
-
-[node name="TomSawyer" parent="." unique_id=1907196645 instance=ExtResource("4_ys1xa")]
-position = Vector2(505, 223)

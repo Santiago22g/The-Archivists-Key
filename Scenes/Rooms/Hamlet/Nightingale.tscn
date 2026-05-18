@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://eec6i0hqu8ij"]
+
+[ext_resource type="Texture2D" uid="uid://d3yxiwmoi68b6" path="res://Assets/Hamlet/Bird_v001_blue_and_yellow.png" id="1_hdo20"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2qvv"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(0, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a7vl"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(47, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvcp7"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(94, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acxrs"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(141, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1djow"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(188, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yucdk"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(235, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq87n"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(282, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2hhr"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(329, 0, 47, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyijp"]
+atlas = ExtResource("1_hdo20")
+region = Rect2(376, 0, 47, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bbhan"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2qvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a7vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvcp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acxrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1djow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yucdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq87n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2hhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyijp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adf32"]
+size = Vector2(30, 26)
+
+[node name="Nightingale" type="Node2D" unique_id=1168381099]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281402264]
+sprite_frames = SubResource("SpriteFrames_bbhan")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1249774088]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_adf32")

@@ -40,7 +40,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogues/prueba.dialogue", "res://Dialogues/Monk.dialogue", "res://Dialogues/Clown.dialogue", "res://Dialogues/Descartes.dialogue", "res://Dialogues/Blind.dialogue", "res://Dialogues/TomSawyer.dialogue", "res://Dialogues/Cockroach.dialogue", "res://Dialogues/origin.dialogue", "res://Dialogues/hyena.dialogue", "res://Dialogues/oldMan.dialogue", "res://Dialogues/library_dialogues.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogues/prueba.dialogue", "res://Dialogues/origin.dialogue", "res://Dialogues/hyena.dialogue", "res://Dialogues/oldMan.dialogue", "res://Dialogues/library_dialogues.dialogue", "res://Dialogues/TheRepublic.dialogue", "res://Dialogues/Metamorphosis.dialogue")
 
 [physics]
 

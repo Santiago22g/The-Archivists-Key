@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6gpecxdad1c0"
-path="res://.godot/imported/Clown_Sprite.png-140f0f9e4cd53391c2073e46c6f89b39.ctex"
+uid="uid://dpj1rbp1fmog4"
+path="res://.godot/imported/Bed.png-2ca098584a4c8cf84a69d7b509918766.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/The Republic/Clown_Sprite.png"
-dest_files=["res://.godot/imported/Clown_Sprite.png-140f0f9e4cd53391c2073e46c6f89b39.ctex"]
+source_file="res://Assets/The Metamorphosis/Bed.png"
+dest_files=["res://.godot/imported/Bed.png-2ca098584a4c8cf84a69d7b509918766.ctex"]
 
 [params]
 

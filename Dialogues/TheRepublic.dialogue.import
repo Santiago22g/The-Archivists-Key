@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ug7eexw6quid"
+path="res://.godot/imported/TheRepublic.dialogue-5d20afa2847238e797e3a08da047ccec.tres"
+
+[deps]
+
+source_file="res://Dialogues/TheRepublic.dialogue"
+dest_files=["res://.godot/imported/TheRepublic.dialogue-5d20afa2847238e797e3a08da047ccec.tres"]
+
+[params]
+
+defaults=true

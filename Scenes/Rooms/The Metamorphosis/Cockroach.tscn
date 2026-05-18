@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://uvyk1353s7ls"]
+
+[ext_resource type="Script" uid="uid://d3w14yb2sk55l" path="res://Scripts/Library/bookshelf.gd" id="1_n7g1t"]
+[ext_resource type="Texture2D" uid="uid://omjfe6vfhmtn" path="res://Assets/The Metamorphosis/Cockroach.png" id="2_frm77"]
+[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="3_g0ofs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkcs0"]
+radius = 23.0
+height = 84.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxn5h"]
+size = Vector2(84, 110.75)
+
+[node name="Cockroach" type="StaticBody2D" unique_id=1994099546]
+script = ExtResource("1_n7g1t")
+
+[node name="Cockroach" type="Sprite2D" parent="." unique_id=1408642984]
+position = Vector2(5.0000076, 5.000004)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("2_frm77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=152185669]
+position = Vector2(5, 4)
+shape = SubResource("CapsuleShape2D_fkcs0")
+
+[node name="FloatingPrompt" parent="." unique_id=1888658071 instance=ExtResource("3_g0ofs")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 14.999992
+offset_top = -40.0
+offset_right = 135.81442
+offset_bottom = 30.62886
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.485, 0.485)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1252016900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1543316903]
+position = Vector2(4, 11.625)
+shape = SubResource("RectangleShape2D_pxn5h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_interaction_area_body_exited"]

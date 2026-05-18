@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://biy0pj7b8ha44"
+path="res://.godot/imported/Metamorphosis.dialogue-28612f0278356bd753ef204e95ce92ca.tres"
+
+[deps]
+
+source_file="res://Dialogues/Metamorphosis.dialogue"
+dest_files=["res://.godot/imported/Metamorphosis.dialogue-28612f0278356bd753ef204e95ce92ca.tres"]
+
+[params]
+
+defaults=true

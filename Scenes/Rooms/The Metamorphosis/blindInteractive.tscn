@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bq2mumlwrpp51"]
+
+[ext_resource type="Script" uid="uid://d3w14yb2sk55l" path="res://Scripts/Library/bookshelf.gd" id="1_tpxyc"]
+[ext_resource type="PackedScene" uid="uid://d124hymrop0i5" path="res://Scenes/Characters/The Metamorphosis/Blind.tscn" id="2_8o3lc"]
+[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="3_jvgk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxn5h"]
+size = Vector2(41, 56)
+
+[node name="Blind" type="StaticBody2D" unique_id=1994099546]
+script = ExtResource("1_tpxyc")
+
+[node name="Blind" parent="." unique_id=2026688956 instance=ExtResource("2_8o3lc")]
+
+[node name="FloatingPrompt" parent="." unique_id=1888658071 instance=ExtResource("3_jvgk0")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.999999
+offset_top = -45.999996
+offset_right = 127.81443
+offset_bottom = 24.628864
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.485, 0.485)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1252016900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1543316903]
+position = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_pxn5h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_interaction_area_body_exited"]
