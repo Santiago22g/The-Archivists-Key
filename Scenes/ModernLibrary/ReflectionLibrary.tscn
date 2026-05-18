@@ -1,12 +1,10 @@
-[gd_scene format=4 uid="uid://bs3qattyf7say"]
+[gd_scene format=4 uid="uid://b7a8x5hlj2y1m"]
 
-[ext_resource type="Texture2D" uid="uid://8671bmhdcqp0" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="1_v84eg"]
-[ext_resource type="PackedScene" uid="uid://eqggnq0c4w3c" path="res://Scenes/ModernLibrary/Bookshelf.tscn" id="3_cum6y"]
-[ext_resource type="Texture2D" uid="uid://b40fryhabty6g" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_hql7v"]
-[ext_resource type="PackedScene" uid="uid://dua24qk8f7vr3" path="res://Scenes/ModernLibrary/BookshelfFront.tscn" id="4_5j6n4"]
-[ext_resource type="Resource" uid="uid://bm3d8tch8158u" path="res://Dialogues/library_dialogues.dialogue" id="5_5c6pd"]
-[ext_resource type="Texture2D" uid="uid://dxyxgqpkt63h7" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="5_fduuh"]
-[ext_resource type="PackedScene" uid="uid://bxrkvdt4pbhjd" path="res://Scenes/ModernLibrary/BookshelfRight.tscn" id="6_5j6n4"]
+[ext_resource type="Texture2D" uid="uid://8671bmhdcqp0" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="1_k8t54"]
+[ext_resource type="Texture2D" uid="uid://b40fryhabty6g" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="2_llevg"]
+[ext_resource type="PackedScene" uid="uid://eqggnq0c4w3c" path="res://Scenes/ModernLibrary/Bookshelf.tscn" id="3_2fynw"]
+[ext_resource type="PackedScene" uid="uid://dua24qk8f7vr3" path="res://Scenes/ModernLibrary/BookshelfFront.tscn" id="4_c55k7"]
+[ext_resource type="Texture2D" uid="uid://dxyxgqpkt63h7" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="5_4g4bj"]
 
 [sub_resource type="Gradient" id="Gradient_241qb"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -15,7 +13,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_241qb")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v84eg"]
-texture = ExtResource("1_v84eg")
+texture = ExtResource("1_k8t54")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -234,79 +232,79 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v84eg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cum6y"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(159.24762, 31.85642, 49.79477, 32.176857)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5c6pd"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(1.100357, 259.45398, 16.842804, 29.398438)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hle7m"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(0, 161.67526, 18.88388, 33.34915)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3uv0x"]
-atlas = ExtResource("5_fduuh")
+atlas = ExtResource("5_4g4bj")
 region = Rect2(94.97903, -1.5557137, 33.78402, 52.05706)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j6n4"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(0, 31.308147, 48.31246, 32.06262)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cum6y"]
 size = Vector2(44.7, 20.786324)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fduuh"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(114.75595, 112.38774, 26.527374, 47.862717)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j6n4"]
 size = Vector2(57.5, 103.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kyf2"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(159.5097, 9.571547, 17.135178, 22.954874)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fduuh"]
 size = Vector2(45, 54)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_241qb"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(66.30318, 111.74831, 28.502052, 48.355057)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c6pd"]
 size = Vector2(47.5, 107.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jive8"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(-1.8402863, 195.00595, 30.444672, 59.839523)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kyf2"]
 size = Vector2(46, 123.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6253"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(142.91658, 158.69322, 33.72821, 34.551132)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afq3r"]
 size = Vector2(67, 72.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qe81"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(83.38199, 38.8114, 27.042053, 24.644768)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jive8"]
 size = Vector2(69, 53)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kw1fj"]
-atlas = ExtResource("3_hql7v")
+atlas = ExtResource("2_llevg")
 region = Rect2(94.14773, 111.55306, 19.52137, 48.526802)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6253"]
 size = Vector2(29.5, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afq3r"]
-atlas = ExtResource("5_fduuh")
+atlas = ExtResource("5_4g4bj")
 region = Rect2(223.71513, 0, 32.101837, 49.99907)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qe81"]
@@ -342,55 +340,50 @@ scale = Vector2(2.75, 1.9482758)
 texture = SubResource("AtlasTexture_5c6pd")
 
 [node name="Plant" type="Sprite2D" parent="." unique_id=311826614]
+visible = false
 z_index = 1
 position = Vector2(789, 409.99997)
 scale = Vector2(2.1666667, 1.530303)
 texture = SubResource("AtlasTexture_hle7m")
 
-[node name="Bookshelf10" parent="." unique_id=589080139 instance=ExtResource("6_5j6n4")]
-position = Vector2(1063, 180)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "doriangray"
+[node name="Bookshelf2" parent="." unique_id=434895208 instance=ExtResource("3_2fynw")]
+position = Vector2(1063, 184)
+book_title = "The Odyssey"
+book_content = "Nobody has blinded me! Count the ships that defied the gods to return home."
 
-[node name="Bookshelf11" parent="." unique_id=2024289458 instance=ExtResource("6_5j6n4")]
-position = Vector2(1064, 333)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "pride"
+[node name="Bookshelf3" parent="." unique_id=762944360 instance=ExtResource("3_2fynw")]
+position = Vector2(1065, 333)
 
-[node name="Bookshelf12" parent="." unique_id=1081652315 instance=ExtResource("6_5j6n4")]
-position = Vector2(1063, 494)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "artwar"
+[node name="Bookshelf4" parent="." unique_id=1975731652 instance=ExtResource("3_2fynw")]
+position = Vector2(1065, 496)
 
-[node name="Bookshelf" parent="." unique_id=1045508662 instance=ExtResource("3_cum6y")]
+[node name="Bookshelf" parent="." unique_id=1045508662 instance=ExtResource("3_2fynw")]
 position = Vector2(25, 170)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "odisea"
 
-[node name="Bookshelf5" parent="." unique_id=455218539 instance=ExtResource("3_cum6y")]
+[node name="Bookshelf5" parent="." unique_id=455218539 instance=ExtResource("3_2fynw")]
 position = Vector2(25, 333)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "dracula"
+book_title = "Dracula"
+book_content = "This page is marked: 'The nosferatu do not cast a shadow. Look for what the glass cannot reflect'.\""
 
-[node name="Bookshelf6" parent="." unique_id=2006075652 instance=ExtResource("3_cum6y")]
+[node name="Bookshelf6" parent="." unique_id=2006075652 instance=ExtResource("3_2fynw")]
 position = Vector2(29, 497)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "romeo"
+book_title = "Alice in Wonderland"
+book_content = "Curiouser and curiouser! Cried Alice."
 
-[node name="Bookshelf7" parent="." unique_id=1130947593 instance=ExtResource("4_5j6n4")]
+[node name="Bookshelf7" parent="." unique_id=1130947593 instance=ExtResource("4_c55k7")]
 position = Vector2(265, 29)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "sherlock"
+book_title = "Romeo & Juliet"
+book_content = "Two houses, both alike in dignity... but time stops for them at a quarter to five"
 
-[node name="Bookshelf8" parent="." unique_id=721173564 instance=ExtResource("4_5j6n4")]
+[node name="Bookshelf8" parent="." unique_id=721173564 instance=ExtResource("4_c55k7")]
 position = Vector2(541, 31)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "mobydick"
+book_title = "Sherlock Holmes"
+book_content = "You see, but you do not observe. The distinction is clear."
 
-[node name="Bookshelf9" parent="." unique_id=1672862207 instance=ExtResource("4_5j6n4")]
+[node name="Bookshelf9" parent="." unique_id=1672862207 instance=ExtResource("4_c55k7")]
 position = Vector2(820, 30)
-dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "alice"
+book_title = "Moby Dick"
+book_content = "Call me Ishmael. Some years ago, I thought I would sail about a little."
 
 [node name="doorExt" type="Sprite2D" parent="." unique_id=195035600]
 z_index = 2

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://de1pdau2di4j3"]
+
+[ext_resource type="Texture2D" uid="uid://clmnsssfngyen" path="res://Assets/ModernLibrary/popup-Photoroom.png" id="1_xad3t"]
+
+[node name="FloatingPrompt" type="Control" unique_id=1888658071]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 127.0
+offset_bottom = 83.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=174667796]
+layout_mode = 0
+offset_left = -281.0
+offset_top = -122.0
+offset_right = 1255.0
+offset_bottom = 838.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xad3t")
+flip_h = true
+
+[node name="Label" type="Label" parent="." unique_id=71149179]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 32.0
+offset_right = 212.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.9567006, 0.9455258, 0.9326768, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.27450982)
+theme_override_font_sizes/font_size = 11
+text = "Press \"E\" to Inspect"
+horizontal_alignment = 1
+vertical_alignment = 1

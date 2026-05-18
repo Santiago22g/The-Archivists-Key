@@ -1,23 +1,23 @@
-[gd_scene format=3 uid="uid://eqggnq0c4w3c"]
+[gd_scene format=3 uid="uid://bxrkvdt4pbhjd"]
 
-[ext_resource type="Texture2D" uid="uid://b40fryhabty6g" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="1_gjyq3"]
-[ext_resource type="Script" uid="uid://d3w14yb2sk55l" path="res://Scripts/Library/bookshelf.gd" id="1_hxxrp"]
-[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="3_a73ds"]
+[ext_resource type="Script" uid="uid://d3w14yb2sk55l" path="res://Scripts/Library/bookshelf.gd" id="1_lgq8c"]
+[ext_resource type="Texture2D" uid="uid://b40fryhabty6g" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="2_w06fn"]
+[ext_resource type="PackedScene" uid="uid://de1pdau2di4j3" path="res://Scenes/ModernLibrary/FloatingPromptRight.tscn" id="3_lgq8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxxrp"]
-atlas = ExtResource("1_gjyq3")
+atlas = ExtResource("2_w06fn")
 region = Rect2(79.41451, 63.46929, 13.639473, 48.876526)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjyq3"]
 size = Vector2(44, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a73ds"]
-size = Vector2(78, 139)
+size = Vector2(96, 134.5)
 
 [node name="Bookshelf" type="StaticBody2D" unique_id=589080139]
 z_index = 1
 collision_mask = 3
-script = ExtResource("1_hxxrp")
+script = ExtResource("1_lgq8c")
 
 [node name="SpriteShelf" type="Sprite2D" parent="." unique_id=408950437]
 texture_filter = 1
@@ -29,19 +29,19 @@ texture = SubResource("AtlasTexture_hxxrp")
 position = Vector2(31, 63)
 shape = SubResource("RectangleShape2D_gjyq3")
 
-[node name="FloatingPrompt" parent="." unique_id=1888658071 instance=ExtResource("3_a73ds")]
+[node name="FloatingPrompt" parent="." unique_id=1888658071 instance=ExtResource("3_lgq8c")]
 z_index = 2
-offset_left = 4.0
-offset_top = -10.0
-offset_right = 131.0
-offset_bottom = 73.0
+offset_left = -151.0
+offset_top = -17.0
+offset_right = -24.0
+offset_bottom = 66.000015
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=233245571]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=401077267]
-position = Vector2(47, 65.5)
+position = Vector2(30, 64.25)
 shape = SubResource("RectangleShape2D_a73ds")
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

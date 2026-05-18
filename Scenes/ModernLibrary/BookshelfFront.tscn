@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dua24qk8f7vr3"]
 
 [ext_resource type="Texture2D" uid="uid://b40fryhabty6g" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="1_hr00x"]
+[ext_resource type="Script" uid="uid://b1uds486e1gmg" path="res://Scripts/Library/bookshelf_front.gd" id="1_xhiny"]
+[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="3_4l2rf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxxrp"]
 atlas = ExtResource("1_hr00x")
@@ -9,7 +11,13 @@ region = Rect2(31.851643, 63.46929, 48.335835, 48.876526)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hr00x"]
 size = Vector2(214, 119)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4l2rf"]
+size = Vector2(222, 157)
+
 [node name="Bookshelf" type="StaticBody2D" unique_id=1776192415]
+z_index = 1
+collision_mask = 3
+script = ExtResource("1_xhiny")
 
 [node name="SpriteShelf" type="Sprite2D" parent="." unique_id=408950437]
 texture_filter = 1
@@ -20,3 +28,20 @@ texture = SubResource("AtlasTexture_hxxrp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2106629978]
 position = Vector2(49, 58.5)
 shape = SubResource("RectangleShape2D_hr00x")
+
+[node name="FloatingPrompt" parent="." unique_id=1888658071 instance=ExtResource("3_4l2rf")]
+offset_left = 31.0
+offset_top = -19.0
+offset_right = 188.0
+offset_bottom = 130.0
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1855105451]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1802501503]
+position = Vector2(48, 68.5)
+shape = SubResource("RectangleShape2D_4l2rf")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
