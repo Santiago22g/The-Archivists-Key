@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bxrkvdt4pbhjd" path="res://Scenes/ModernLibrary/BookshelfRight.tscn" id="6_5j6n4"]
 [ext_resource type="Script" uid="uid://bvye6uuuai5j7" path="res://Scripts/Library/mirror.gd" id="8_5c6pd"]
 [ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="9_1kyf2"]
+[ext_resource type="Script" uid="uid://dbtksuvdtuv6j" path="res://Scripts/Library/clock_object.gd" id="10_afq3r"]
+[ext_resource type="PackedScene" uid="uid://w3fxareejrmq" path="res://Scenes/ModernLibrary/clock_ui.tscn" id="11_jive8"]
 
 [sub_resource type="Gradient" id="Gradient_241qb"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -282,6 +284,9 @@ region = Rect2(66.30318, 111.74831, 28.502052, 48.355057)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c6pd"]
 size = Vector2(47.5, 107.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kw1fj"]
+size = Vector2(58, 133)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_jive8"]
 atlas = ExtResource("3_hql7v")
 region = Rect2(-1.8402863, 195.00595, 30.444672, 59.839523)
@@ -355,7 +360,7 @@ texture = SubResource("AtlasTexture_hle7m")
 [node name="Bookshelf10" parent="." unique_id=589080139 instance=ExtResource("6_5j6n4")]
 position = Vector2(1063, 200)
 dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "doriangray"
+dialogue_title = "odisea"
 
 [node name="Bookshelf11" parent="." unique_id=2024289458 instance=ExtResource("6_5j6n4")]
 position = Vector2(1064, 355)
@@ -370,7 +375,7 @@ dialogue_title = "artwar"
 [node name="Bookshelf" parent="." unique_id=1045508662 instance=ExtResource("3_cum6y")]
 position = Vector2(25, 196)
 dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "odisea"
+dialogue_title = "doriangray"
 
 [node name="Bookshelf5" parent="." unique_id=455218539 instance=ExtResource("3_cum6y")]
 position = Vector2(25, 352)
@@ -380,7 +385,7 @@ dialogue_title = "dracula"
 [node name="Bookshelf6" parent="." unique_id=2006075652 instance=ExtResource("3_cum6y")]
 position = Vector2(29, 507)
 dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "romeo"
+dialogue_title = "mobydick"
 
 [node name="Bookshelf7" parent="." unique_id=1130947593 instance=ExtResource("4_5j6n4")]
 position = Vector2(265, 29)
@@ -390,7 +395,7 @@ dialogue_title = "sherlock"
 [node name="Bookshelf8" parent="." unique_id=721173564 instance=ExtResource("4_5j6n4")]
 position = Vector2(541, 31)
 dialogue_resource = ExtResource("5_5c6pd")
-dialogue_title = "mobydick"
+dialogue_title = "romeo"
 
 [node name="Bookshelf9" parent="." unique_id=1672862207 instance=ExtResource("4_5j6n4")]
 position = Vector2(820, 30)
@@ -458,17 +463,32 @@ texture = SubResource("AtlasTexture_1kyf2")
 position = Vector2(466, 397)
 shape = SubResource("RectangleShape2D_fduuh")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=2085581253]
+[node name="ClockObject" type="StaticBody2D" parent="." unique_id=2085581253]
+script = ExtResource("10_afq3r")
 
-[node name="Clock" type="Sprite2D" parent="StaticBody2D4" unique_id=570755014]
+[node name="Clock" type="Sprite2D" parent="ClockObject" unique_id=570755014]
 texture_filter = 1
 position = Vector2(116.00003, 88)
 scale = Vector2(2.4642856, 2.3802085)
 texture = SubResource("AtlasTexture_241qb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=858272636]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClockObject" unique_id=858272636]
 position = Vector2(115, 85)
 shape = SubResource("RectangleShape2D_5c6pd")
+
+[node name="FloatingPrompt" parent="ClockObject" unique_id=1820840945 instance=ExtResource("9_1kyf2")]
+z_index = 2
+offset_left = 89.0
+offset_top = 19.0
+offset_right = 216.0
+offset_bottom = 102.0
+
+[node name="InteractionArea" type="Area2D" parent="ClockObject" unique_id=237520497]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClockObject/InteractionArea" unique_id=1323273235]
+position = Vector2(118, 91.5)
+shape = SubResource("RectangleShape2D_kw1fj")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1493443913]
 z_index = 1
@@ -552,5 +572,13 @@ texture = SubResource("AtlasTexture_afq3r")
 position = Vector2(565.25, 620.5)
 shape = SubResource("RectangleShape2D_8qe81")
 
+[node name="ClockUI" parent="." unique_id=1094794536 instance=ExtResource("11_jive8")]
+visible = false
+z_index = 4
+dialogue_resource = ExtResource("5_5c6pd")
+dialogue_title = "time"
+
 [connection signal="body_entered" from="StaticBody2D2/InteractionArea" to="StaticBody2D2" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="StaticBody2D2/InteractionArea" to="StaticBody2D2" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="ClockObject/InteractionArea" to="ClockObject" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="ClockObject/InteractionArea" to="ClockObject" method="_on_interaction_area_body_exited"]

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://w3fxareejrmq"]
+
+[ext_resource type="Script" uid="uid://dbust1dkrf6b8" path="res://Scripts/Library/clock_ui.gd" id="1_84wbt"]
+
+[node name="ClockUI" type="Control" unique_id=1094794536]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1158.0
+offset_bottom = 650.0
+script = ExtResource("1_84wbt")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=22322525]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 651.0
+color = Color(0.23874447, 0.23874435, 0.23874426, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1218681862]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 655.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1441942574]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 165.0
+offset_right = 927.0
+offset_bottom = 419.0
+theme_override_colors/font_color = Color(0.5321116, 0.527879, 0.24592915, 1)
+theme_override_colors/font_shadow_color = Color(0.7591983, 0.83826965, 0.38445985, 1)
+theme_override_colors/font_outline_color = Color(0.7085098, 0.6990476, 0.3290829, 1)
+theme_override_font_sizes/font_size = 120
+text = "12:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnHour" type="Button" parent="." unique_id=238695586]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 245.0
+offset_right = 316.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 70
+text = "+"
+
+[node name="BtnMinute" type="Button" parent="." unique_id=365420229]
+layout_mode = 0
+offset_left = 863.0
+offset_top = 235.0
+offset_right = 1032.0
+offset_bottom = 374.0
+theme_override_font_sizes/font_size = 70
+text = "+"
+
+[node name="BtnClose" type="Button" parent="." unique_id=1132384088]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 508.0
+offset_right = 740.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 50
+text = "Close"
+
+[connection signal="pressed" from="BtnHour" to="." method="_on_btn_hour_pressed"]
+[connection signal="pressed" from="BtnMinute" to="." method="_on_btn_minute_pressed"]
+[connection signal="pressed" from="BtnClose" to="." method="_on_btn_close_pressed"]

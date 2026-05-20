@@ -1,6 +1,7 @@
 ~ odisea
 You: This is Homer's Odyssey.
 You: A verse is underlined in blue: "Nobody has blinded me! Count the ships that defied the gods to return home."
+You: It has a note: Psst! The number of ships is 2. There's your first number!.
 => END
 
 ~ dracula
@@ -53,7 +54,13 @@ You: A great book, but tactics won't unlock that front door.
 You: Hmm... if i remember correctly, there was a plant here before...
 You: What is that? There is a paper in the table...
 You: It says the second number is 8
+=> END
 
 ~ go
 You: Let's see... Do I already have the number in this room?
 You: If i have it, i should go back to the previous room
+=> END
+
+~ time
+You: Finally, I found the third number!
+You: The third number is 6

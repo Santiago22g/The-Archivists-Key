@@ -539,7 +539,7 @@ shape = SubResource("RectangleShape2D_es7jj")
 [node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=46183508]
 
 [node name="BigLamp" type="Sprite2D" parent="StaticBody2D9" unique_id=959614023]
-z_index = 2
+z_index = 3
 texture_filter = 1
 position = Vector2(866.875, 298.25003)
 scale = Vector2(2.7500033, 2.2604165)
