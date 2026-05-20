@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://uf27ubdhvbr7"
+path="res://.godot/imported/frankenstein.dialogue-49e9e2bf30f97670f2a5f162b6d329f5.tres"
+
+[deps]
+
+source_file="res://Dialogues/frankenstein.dialogue"
+dest_files=["res://.godot/imported/frankenstein.dialogue-49e9e2bf30f97670f2a5f162b6d329f5.tres"]
+
+[params]
+
+defaults=true
