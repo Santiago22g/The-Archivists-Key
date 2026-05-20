@@ -60,6 +60,7 @@ Door: Only one idea may guide you forward. Choose carefully.
 
 ~ correct
 Door: You may proceed.
+do GlobalData.go_to_next_scene()
 => END
 
 ~ wrong

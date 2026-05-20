@@ -6,7 +6,7 @@ const SCENES: Array[String] = [
 	"res://Scenes/DonQuijote/quijote.tscn",
 	"res://Scenes/Rooms/The Republic/RepublicMainScene.tscn",
 	"res://Scenes/The Origin Of Species/origin.tscn",
-	"res://Scenes/frankenstein.tscn",
+	"res://Scenes/Frankenstein/main.tscn",
 ]
 
 var current_scene_index: int = 0

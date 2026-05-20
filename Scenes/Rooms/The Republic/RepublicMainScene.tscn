@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://xttuwl6t83rw" path="res://Scenes/Rooms/The Republic/TheRepublic.tscn" id="1_ja0jr"]
 [ext_resource type="PackedScene" uid="uid://b1uedlk5bsvk0" path="res://Scenes/main_character.tscn" id="2_2p8gi"]
 [ext_resource type="AudioStream" uid="uid://mu15ou3i145a" path="res://Assets/The Republic/Echoes in the Cavern.mp3" id="2_ogcst"]
+[ext_resource type="Texture2D" uid="uid://ua1rtqscph5t" path="res://Assets/Black.png" id="4_2prhs"]
 
 [sub_resource type="Gradient" id="Gradient_i0a3f"]
 offsets = PackedFloat32Array(0, 0.6927711)
@@ -13,6 +14,42 @@ gradient = SubResource("Gradient_i0a3f")
 fill = 1
 fill_from = Vector2(0.47826087, 0.49130434)
 fill_to = Vector2(1, 1)
+
+[sub_resource type="Animation" id="Animation_8wf0d"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uj6e1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qbgpc"]
+_data = {
+&"Fade_out": SubResource("Animation_8wf0d"),
+&"RESET": SubResource("Animation_uj6e1")
+}
 
 [node name="RepublicMainScene" type="Node2D" unique_id=2132671522]
 
@@ -32,3 +69,12 @@ scale = Vector2(3.8139775, 3.8877954)
 energy = 1.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_2prhs")
+
+[node name="Black" type="Sprite2D" parent="." unique_id=1022486121]
+position = Vector2(575.49994, 295.5)
+scale = Vector2(2.251953, 1.1503906)
+texture = ExtResource("4_2prhs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Black" unique_id=771595133]
+libraries/ = SubResource("AnimationLibrary_qbgpc")
+autoplay = &"Fade_out"

@@ -9,7 +9,7 @@
 size = Vector2(176, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxn5h"]
-size = Vector2(10, 11)
+size = Vector2(177, 19)
 
 [node name="Descartes" type="StaticBody2D" unique_id=1994099546]
 script = ExtResource("1_onv4t")
@@ -44,7 +44,7 @@ scale = Vector2(0.485, 0.485)
 [node name="Area2D" type="Area2D" parent="." unique_id=1252016900]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1543316903]
-position = Vector2(88, 46)
+position = Vector2(88.5, 70.5)
 shape = SubResource("RectangleShape2D_pxn5h")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_interaction_area_body_entered"]

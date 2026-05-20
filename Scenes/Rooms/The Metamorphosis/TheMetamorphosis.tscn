@@ -2,7 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://biilx1baxxkm8" path="res://Assets/The Metamorphosis/Interiors.tres" id="1_up0x4"]
 [ext_resource type="PackedScene" uid="uid://ck7x3ad7ude5e" path="res://Scenes/Rooms/The Metamorphosis/Bed.tscn" id="2_a4wmk"]
-[ext_resource type="Texture2D" uid="uid://ua1rtqscph5t" path="res://Assets/Black.png" id="4_87g5o"]
 [ext_resource type="Resource" uid="uid://biy0pj7b8ha44" path="res://Dialogues/Metamorphosis.dialogue" id="4_dsun4"]
 [ext_resource type="PackedScene" uid="uid://uvyk1353s7ls" path="res://Scenes/Rooms/The Metamorphosis/Cockroach.tscn" id="4_pcvyc"]
 [ext_resource type="PackedScene" uid="uid://bq2mumlwrpp51" path="res://Scenes/Rooms/The Metamorphosis/blindInteractive.tscn" id="6_jm6qa"]
@@ -42,42 +41,6 @@ b = Vector2(612, 414)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jm6qa"]
 a = Vector2(611, 412)
 b = Vector2(-2, 411)
-
-[sub_resource type="Animation" id="Animation_8wf0d"]
-resource_name = "Fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_uj6e1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pcvyc"]
-_data = {
-&"Fade_out": SubResource("Animation_8wf0d"),
-&"RESET": SubResource("Animation_uj6e1")
-}
 
 [node name="TheMetamorphosis" type="Node2D" unique_id=1621232550]
 
@@ -155,15 +118,6 @@ limit_left = -3
 limit_top = 76
 limit_right = 612
 limit_bottom = 416
-
-[node name="Black" type="Sprite2D" parent="." unique_id=1645944132]
-position = Vector2(575.49994, 295.5)
-scale = Vector2(2.251953, 1.1503906)
-texture = ExtResource("4_87g5o")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Black" unique_id=953901408]
-libraries/ = SubResource("AnimationLibrary_pcvyc")
-autoplay = &"Fade_out"
 
 [node name="Door" parent="." unique_id=512446093 instance=ExtResource("8_0uphi")]
 position = Vector2(590, 287)
