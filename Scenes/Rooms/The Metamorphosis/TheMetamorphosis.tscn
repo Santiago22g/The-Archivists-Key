@@ -157,7 +157,6 @@ limit_right = 612
 limit_bottom = 416
 
 [node name="Black" type="Sprite2D" parent="." unique_id=1645944132]
-visible = false
 position = Vector2(575.49994, 295.5)
 scale = Vector2(2.251953, 1.1503906)
 texture = ExtResource("4_87g5o")

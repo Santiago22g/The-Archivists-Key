@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccsuicranvrgj"
+path="res://.godot/imported/The Achivists Key.mp3-669add82db935d2916b5045b34fdc86d.mp3str"
+
+[deps]
+
+source_file="res://Assets/The Achivists Key.mp3"
+dest_files=["res://.godot/imported/The Achivists Key.mp3-669add82db935d2916b5045b34fdc86d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

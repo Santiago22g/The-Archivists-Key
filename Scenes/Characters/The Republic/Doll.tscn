@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brm0mt3ciwpe4"]
 
 [ext_resource type="Script" uid="uid://d3w14yb2sk55l" path="res://Scripts/Library/bookshelf.gd" id="1_ce87x"]
-[ext_resource type="Texture2D" uid="uid://bwcrdaxgn8rho" path="res://Assets/cute-baby-doll-pixel-art-260nw-2731230447-removebg-preview.png" id="2_a8ngh"]
+[ext_resource type="Texture2D" uid="uid://bwcrdaxgn8rho" path="res://Assets/The Republic/cute-baby-doll-pixel-art-260nw-2731230447-removebg-preview.png" id="2_a8ngh"]
 [ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="3_l4w1j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkcs0"]

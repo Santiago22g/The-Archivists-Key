@@ -64,6 +64,7 @@ Door: Three interpretations drift through this chamber. Only one reflects what t
 
 ~ correct
 Door: The truth aligns. You may proceed.
+do GlobalData.go_to_next_scene()
 => END
 
 ~ wrong
