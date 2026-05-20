@@ -42,3 +42,26 @@ Doll: Doors closed behind her that night — loudly enough for the whole world t
 Doll: So if you seek escape, perhaps the answer lies not in philosophers or republics... but in the woman who walked away from her little doll’s house.
 
 Doll: Nora always knew how to leave a room.
+
+~ door
+Door: Only one idea may guide you forward. Choose carefully.
+
+- Book VII
+  Door: The shadows part before those who know where enlightenment begins.
+  => correct
+
+- A Doll's House
+  Door: A woman may escape her home... but not this chamber.
+  => wrong
+
+- "I think, therefore I am"
+  Door: Thought alone can't open every door.
+  => wrong
+
+~ correct
+Door: You may proceed.
+=> END
+
+~ wrong
+Door: That is not the truth this room seeks.
+=> END

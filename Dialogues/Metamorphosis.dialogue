@@ -44,3 +44,28 @@ Tom Sawyer: But the strangest thing about adventure is this: the important part 
 Tom Sawyer: If you’re looking for the right answer, don’t think about the treasure at the end. Think about the boy who convinced everyone that work could be fun.
 
 Tom Sawyer: That’s where his story truly begins.
+
+~ door
+Door: The walls here do not answer to reason... they respond only to what remains after identity collapses.
+
+Door: Three interpretations drift through this chamber. Only one reflects what truly happened to the man who woke as something else.
+
+- Deshumanization
+  Door: The process is recognized. What was once human is reduced until only function and alienation remain.
+  => correct
+
+- Tom Sawyer
+  Door: A boy who turns mischief into freedom... yet this room speaks of something far colder than adventure on the river.
+  => wrong
+
+- Tormes
+  Door: A blind man teaches survival through deceit and hunger... but this transformation is not about learning to trick the world.
+  => wrong
+
+~ correct
+Door: The truth aligns. You may proceed.
+=> END
+
+~ wrong
+Door: The interpretation fails. This door remains closed.
+=> END

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://uvyk1353s7ls" path="res://Scenes/Rooms/The Metamorphosis/Cockroach.tscn" id="4_pcvyc"]
 [ext_resource type="PackedScene" uid="uid://bq2mumlwrpp51" path="res://Scenes/Rooms/The Metamorphosis/blindInteractive.tscn" id="6_jm6qa"]
 [ext_resource type="PackedScene" uid="uid://4vi6m7cr3mwg" path="res://Scenes/Rooms/The Metamorphosis/tom_sawyer.tscn" id="7_0uphi"]
+[ext_resource type="PackedScene" uid="uid://cj7kadgoy4yrg" path="res://Assets/The Metamorphosis/DoorMeta.tscn" id="8_0uphi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e60vl"]
 size = Vector2(60, 76)
@@ -164,3 +165,8 @@ texture = ExtResource("4_87g5o")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Black" unique_id=953901408]
 libraries/ = SubResource("AnimationLibrary_pcvyc")
 autoplay = &"Fade_out"
+
+[node name="Door" parent="." unique_id=512446093 instance=ExtResource("8_0uphi")]
+position = Vector2(590, 287)
+dialogue_resource = ExtResource("4_dsun4")
+dialogue_title = "door"

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cj7kadgoy4yrg"]
+
+[ext_resource type="Script" uid="uid://d3w14yb2sk55l" path="res://Scripts/Library/bookshelf.gd" id="1_kb5kb"]
+[ext_resource type="Texture2D" uid="uid://c8ktri3too6ay" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/untitled.png" id="2_gusrk"]
+[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="3_ekigp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkcs0"]
+radius = 23.0
+height = 114.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxn5h"]
+size = Vector2(69, 110.75)
+
+[node name="Door" type="StaticBody2D" unique_id=1994099546]
+script = ExtResource("1_kb5kb")
+
+[node name="Cockroach" type="Sprite2D" parent="." unique_id=1408642984]
+position = Vector2(76, 117)
+scale = Vector2(9.2387495, 9.1137495)
+texture = ExtResource("2_gusrk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=152185669]
+position = Vector2(7, 13)
+shape = SubResource("CapsuleShape2D_fkcs0")
+
+[node name="FloatingPrompt" parent="." unique_id=1888658071 instance=ExtResource("3_ekigp")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -14.999992
+offset_right = 69.77322
+offset_bottom = 55.62887
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.485, 0.485)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1252016900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1543316903]
+position = Vector2(3.5, 13)
+shape = SubResource("RectangleShape2D_pxn5h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_interaction_area_body_exited"]
