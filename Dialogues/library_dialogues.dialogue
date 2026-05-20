@@ -48,3 +48,12 @@ You: This is The Art of War by Sun Tzu.
 You: A marked sentence reads: "All warfare is based on deception."
 You: A great book, but tactics won't unlock that front door.
 => END
+
+~ plant
+You: Hmm... if i remember correctly, there was a plant here before...
+You: What is that? There is a paper in the table...
+You: It says the second number is 8
+
+~ go
+You: Let's see... Do I already have the number in this room?
+You: If i have it, i should go back to the previous room

@@ -5,6 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://eqggnq0c4w3c" path="res://Scenes/ModernLibrary/Bookshelf.tscn" id="3_2fynw"]
 [ext_resource type="PackedScene" uid="uid://dua24qk8f7vr3" path="res://Scenes/ModernLibrary/BookshelfFront.tscn" id="4_c55k7"]
 [ext_resource type="Texture2D" uid="uid://dxyxgqpkt63h7" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="5_4g4bj"]
+[ext_resource type="Texture2D" uid="uid://dfgimkt5hiep0" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="6_llevg"]
+[ext_resource type="AudioStream" uid="uid://bpct7hqi6mn3s" path="res://Assets/ModernLibrary/House of Tension – Music & SFX Pack/ogg_loop/Darkened_Corridor_Loop.ogg" id="7_c55k7"]
+[ext_resource type="PackedScene" uid="uid://b1uedlk5bsvk0" path="res://Scenes/main_character.tscn" id="8_4g4bj"]
+[ext_resource type="Script" uid="uid://bnqb2vwuf4a16" path="res://Scripts/Library/plant.gd" id="9_0r0rv"]
+[ext_resource type="Script" uid="uid://bvye6uuuai5j7" path="res://Scripts/Library/mirror.gd" id="9_hilms"]
+[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="10_2rm18"]
+[ext_resource type="PackedScene" uid="uid://bxrkvdt4pbhjd" path="res://Scenes/ModernLibrary/BookshelfRight.tscn" id="11_tek5e"]
+[ext_resource type="Resource" uid="uid://bm3d8tch8158u" path="res://Dialogues/library_dialogues.dialogue" id="12_0r0rv"]
 
 [sub_resource type="Gradient" id="Gradient_241qb"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -248,18 +256,21 @@ atlas = ExtResource("5_4g4bj")
 region = Rect2(94.97903, -1.5557137, 33.78402, 52.05706)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j6n4"]
-atlas = ExtResource("2_llevg")
+atlas = ExtResource("6_llevg")
 region = Rect2(0, 31.308147, 48.31246, 32.06262)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cum6y"]
 size = Vector2(44.7, 20.786324)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fduuh"]
-atlas = ExtResource("2_llevg")
-region = Rect2(114.75595, 112.38774, 26.527374, 47.862717)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j6n4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tek5e"]
 size = Vector2(57.5, 103.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r0rv"]
+size = Vector2(81, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fynw"]
+atlas = ExtResource("6_llevg")
+region = Rect2(111.9993, 112.01781, 32.405075, 48.8889)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kyf2"]
 atlas = ExtResource("2_llevg")
@@ -269,21 +280,21 @@ region = Rect2(159.5097, 9.571547, 17.135178, 22.954874)
 size = Vector2(45, 54)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_241qb"]
-atlas = ExtResource("2_llevg")
+atlas = ExtResource("6_llevg")
 region = Rect2(66.30318, 111.74831, 28.502052, 48.355057)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c6pd"]
 size = Vector2(47.5, 107.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jive8"]
-atlas = ExtResource("2_llevg")
+atlas = ExtResource("6_llevg")
 region = Rect2(-1.8402863, 195.00595, 30.444672, 59.839523)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kyf2"]
 size = Vector2(46, 123.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6253"]
-atlas = ExtResource("2_llevg")
+atlas = ExtResource("6_llevg")
 region = Rect2(142.91658, 158.69322, 33.72821, 34.551132)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afq3r"]
@@ -296,8 +307,11 @@ region = Rect2(83.38199, 38.8114, 27.042053, 24.644768)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jive8"]
 size = Vector2(69, 53)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es7jj"]
+size = Vector2(81, 84)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kw1fj"]
-atlas = ExtResource("2_llevg")
+atlas = ExtResource("6_llevg")
 region = Rect2(94.14773, 111.55306, 19.52137, 48.526802)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6253"]
@@ -310,7 +324,7 @@ region = Rect2(223.71513, 0, 32.101837, 49.99907)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qe81"]
 size = Vector2(95.5, 41)
 
-[node name="Library" type="Node2D" unique_id=72035892]
+[node name="ReflectionLibrary" type="Node2D" unique_id=72035892]
 y_sort_enabled = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1693161878]
@@ -346,47 +360,38 @@ position = Vector2(789, 409.99997)
 scale = Vector2(2.1666667, 1.530303)
 texture = SubResource("AtlasTexture_hle7m")
 
-[node name="Bookshelf2" parent="." unique_id=434895208 instance=ExtResource("3_2fynw")]
-position = Vector2(1063, 184)
-book_title = "The Odyssey"
-book_content = "Nobody has blinded me! Count the ships that defied the gods to return home."
-
-[node name="Bookshelf3" parent="." unique_id=762944360 instance=ExtResource("3_2fynw")]
-position = Vector2(1065, 333)
-
-[node name="Bookshelf4" parent="." unique_id=1975731652 instance=ExtResource("3_2fynw")]
-position = Vector2(1065, 496)
-
 [node name="Bookshelf" parent="." unique_id=1045508662 instance=ExtResource("3_2fynw")]
-position = Vector2(25, 170)
+position = Vector2(27, 198)
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
 
 [node name="Bookshelf5" parent="." unique_id=455218539 instance=ExtResource("3_2fynw")]
-position = Vector2(25, 333)
-book_title = "Dracula"
-book_content = "This page is marked: 'The nosferatu do not cast a shadow. Look for what the glass cannot reflect'.\""
+position = Vector2(28, 350)
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
 
 [node name="Bookshelf6" parent="." unique_id=2006075652 instance=ExtResource("3_2fynw")]
-position = Vector2(29, 497)
-book_title = "Alice in Wonderland"
-book_content = "Curiouser and curiouser! Cried Alice."
+position = Vector2(29, 505)
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
 
 [node name="Bookshelf7" parent="." unique_id=1130947593 instance=ExtResource("4_c55k7")]
 position = Vector2(265, 29)
-book_title = "Romeo & Juliet"
-book_content = "Two houses, both alike in dignity... but time stops for them at a quarter to five"
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
 
 [node name="Bookshelf8" parent="." unique_id=721173564 instance=ExtResource("4_c55k7")]
 position = Vector2(541, 31)
-book_title = "Sherlock Holmes"
-book_content = "You see, but you do not observe. The distinction is clear."
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
 
 [node name="Bookshelf9" parent="." unique_id=1672862207 instance=ExtResource("4_c55k7")]
 position = Vector2(820, 30)
-book_title = "Moby Dick"
-book_content = "Call me Ishmael. Some years ago, I thought I would sail about a little."
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
 
 [node name="doorExt" type="Sprite2D" parent="." unique_id=195035600]
-z_index = 2
+z_index = 3
 texture_filter = 1
 position = Vector2(565, 582)
 scale = Vector2(3.4242427, 2.5887012)
@@ -407,17 +412,32 @@ position = Vector2(482.49997, 360)
 scale = Vector2(3.3333333, 3.65625)
 shape = SubResource("RectangleShape2D_cum6y")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=688508065]
+[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=580433043]
+script = ExtResource("9_hilms")
 
-[node name="Mirror" type="Sprite2D" parent="StaticBody2D2" unique_id=1462215102]
+[node name="FloatingPrompt" parent="StaticBody2D11" unique_id=1888658071 instance=ExtResource("10_2rm18")]
+z_index = 2
+offset_left = 1023.0
+offset_top = 25.0
+offset_right = 1150.0
+offset_bottom = 108.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=689370686]
+position = Vector2(1052, 95)
+shape = SubResource("RectangleShape2D_tek5e")
+
+[node name="InteractionArea" type="Area2D" parent="StaticBody2D11" unique_id=1215684009]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11/InteractionArea" unique_id=2111619696]
+position = Vector2(1045, 93)
+shape = SubResource("RectangleShape2D_0r0rv")
+
+[node name="Mirror" type="Sprite2D" parent="StaticBody2D11" unique_id=1462215102]
 texture_filter = 1
 position = Vector2(1050, 96.00001)
 scale = Vector2(2.5769231, 2.5478723)
-texture = SubResource("AtlasTexture_fduuh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=277214418]
-position = Vector2(1052, 95)
-shape = SubResource("RectangleShape2D_5j6n4")
+texture = SubResource("AtlasTexture_2fynw")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1448631624]
 z_index = 1
@@ -487,6 +507,9 @@ shape = SubResource("RectangleShape2D_afq3r")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=1310952934]
 z_index = 1
+script = ExtResource("9_0r0rv")
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "plant"
 
 [node name="SmallTable" type="Sprite2D" parent="StaticBody2D8" unique_id=1211956959]
 texture_filter = 1
@@ -498,6 +521,20 @@ texture = SubResource("AtlasTexture_8qe81")
 z_index = 1
 position = Vector2(787.5, 437.5)
 shape = SubResource("RectangleShape2D_jive8")
+
+[node name="FloatingPrompt" parent="StaticBody2D8" unique_id=953565838 instance=ExtResource("10_2rm18")]
+z_index = 2
+offset_left = 758.0
+offset_top = 346.0
+offset_right = 885.0
+offset_bottom = 429.0
+
+[node name="InteractionArea" type="Area2D" parent="StaticBody2D8" unique_id=1498916482]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8/InteractionArea" unique_id=1655315913]
+position = Vector2(787.5, 442)
+shape = SubResource("RectangleShape2D_es7jj")
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=46183508]
 
@@ -517,6 +554,7 @@ shape = SubResource("RectangleShape2D_s6253")
 z_index = 2
 
 [node name="door" type="Sprite2D" parent="StaticBody2D10" unique_id=1508010428]
+z_index = 3
 texture_filter = 1
 position = Vector2(566, 583.5)
 scale = Vector2(3.1874998, 2.55102)
@@ -525,3 +563,33 @@ texture = SubResource("AtlasTexture_afq3r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=2094540632]
 position = Vector2(565.25, 620.5)
 shape = SubResource("RectangleShape2D_8qe81")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=482795607]
+stream = ExtResource("7_c55k7")
+volume_db = 10.981
+autoplay = true
+parameters/looping = true
+
+[node name="MainCharacter" parent="." unique_id=1165652071 instance=ExtResource("8_4g4bj")]
+z_index = 2
+position = Vector2(339, 434)
+
+[node name="Bookshelf10" parent="." unique_id=589080139 instance=ExtResource("11_tek5e")]
+position = Vector2(1063, 200)
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
+
+[node name="Bookshelf11" parent="." unique_id=492240087 instance=ExtResource("11_tek5e")]
+position = Vector2(1064, 355)
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
+
+[node name="Bookshelf12" parent="." unique_id=1310101737 instance=ExtResource("11_tek5e")]
+position = Vector2(1063, 507)
+dialogue_resource = ExtResource("12_0r0rv")
+dialogue_title = "go"
+
+[connection signal="body_entered" from="StaticBody2D11/InteractionArea" to="StaticBody2D11" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="StaticBody2D11/InteractionArea" to="StaticBody2D11" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="StaticBody2D8/InteractionArea" to="StaticBody2D8" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="StaticBody2D8/InteractionArea" to="StaticBody2D8" method="_on_interaction_area_body_exited"]

@@ -7,6 +7,8 @@
 [ext_resource type="Resource" uid="uid://bm3d8tch8158u" path="res://Dialogues/library_dialogues.dialogue" id="5_5c6pd"]
 [ext_resource type="Texture2D" uid="uid://dxyxgqpkt63h7" path="res://Assets/ModernLibrary/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="5_fduuh"]
 [ext_resource type="PackedScene" uid="uid://bxrkvdt4pbhjd" path="res://Scenes/ModernLibrary/BookshelfRight.tscn" id="6_5j6n4"]
+[ext_resource type="Script" uid="uid://bvye6uuuai5j7" path="res://Scripts/Library/mirror.gd" id="8_5c6pd"]
+[ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="9_1kyf2"]
 
 [sub_resource type="Gradient" id="Gradient_241qb"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -263,6 +265,9 @@ region = Rect2(114.75595, 112.38774, 26.527374, 47.862717)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j6n4"]
 size = Vector2(57.5, 103.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hle7m"]
+size = Vector2(74.5, 136)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kyf2"]
 atlas = ExtResource("3_hql7v")
 region = Rect2(159.5097, 9.571547, 17.135178, 22.954874)
@@ -348,32 +353,32 @@ scale = Vector2(2.1666667, 1.530303)
 texture = SubResource("AtlasTexture_hle7m")
 
 [node name="Bookshelf10" parent="." unique_id=589080139 instance=ExtResource("6_5j6n4")]
-position = Vector2(1063, 180)
+position = Vector2(1063, 200)
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "doriangray"
 
 [node name="Bookshelf11" parent="." unique_id=2024289458 instance=ExtResource("6_5j6n4")]
-position = Vector2(1064, 333)
+position = Vector2(1064, 355)
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "pride"
 
 [node name="Bookshelf12" parent="." unique_id=1081652315 instance=ExtResource("6_5j6n4")]
-position = Vector2(1063, 494)
+position = Vector2(1063, 507)
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "artwar"
 
 [node name="Bookshelf" parent="." unique_id=1045508662 instance=ExtResource("3_cum6y")]
-position = Vector2(25, 170)
+position = Vector2(25, 196)
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "odisea"
 
 [node name="Bookshelf5" parent="." unique_id=455218539 instance=ExtResource("3_cum6y")]
-position = Vector2(25, 333)
+position = Vector2(25, 352)
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "dracula"
 
 [node name="Bookshelf6" parent="." unique_id=2006075652 instance=ExtResource("3_cum6y")]
-position = Vector2(29, 497)
+position = Vector2(29, 507)
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "romeo"
 
@@ -415,6 +420,7 @@ scale = Vector2(3.3333333, 3.65625)
 shape = SubResource("RectangleShape2D_cum6y")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=688508065]
+script = ExtResource("8_5c6pd")
 
 [node name="Mirror" type="Sprite2D" parent="StaticBody2D2" unique_id=1462215102]
 texture_filter = 1
@@ -422,9 +428,22 @@ position = Vector2(1050, 96.00001)
 scale = Vector2(2.5769231, 2.5478723)
 texture = SubResource("AtlasTexture_fduuh")
 
+[node name="FloatingPrompt" parent="StaticBody2D2" unique_id=1888658071 instance=ExtResource("9_1kyf2")]
+offset_left = 1023.0
+offset_top = 25.0
+offset_right = 1150.0
+offset_bottom = 108.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=277214418]
 position = Vector2(1052, 95)
 shape = SubResource("RectangleShape2D_5j6n4")
+
+[node name="InteractionArea" type="Area2D" parent="StaticBody2D2" unique_id=1065337467]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/InteractionArea" unique_id=437451360]
+position = Vector2(1045, 93)
+shape = SubResource("RectangleShape2D_hle7m")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1448631624]
 z_index = 1
@@ -532,3 +551,6 @@ texture = SubResource("AtlasTexture_afq3r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=2094540632]
 position = Vector2(565.25, 620.5)
 shape = SubResource("RectangleShape2D_8qe81")
+
+[connection signal="body_entered" from="StaticBody2D2/InteractionArea" to="StaticBody2D2" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="StaticBody2D2/InteractionArea" to="StaticBody2D2" method="_on_interaction_area_body_exited"]
