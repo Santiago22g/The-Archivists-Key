@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
-GlobalData="*uid://binnlaimsw6fi"
 
 [display]
 
@@ -41,7 +40,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogues/prueba.dialogue", "res://Dialogues/origin.dialogue", "res://Dialogues/hyena.dialogue", "res://Dialogues/oldMan.dialogue", "res://Dialogues/library_dialogues.dialogue", "res://Dialogues/TheRepublic.dialogue", "res://Dialogues/Metamorphosis.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogues/prueba.dialogue", "res://Dialogues/origin.dialogue", "res://Dialogues/hyena.dialogue", "res://Dialogues/oldMan.dialogue", "res://Dialogues/library_dialogues.dialogue", "res://Dialogues/TheRepublic.dialogue", "res://Dialogues/Metamorphosis.dialogue", "res://Dialogues/frankenstein.dialogue")
 
 [physics]
 

@@ -1,0 +1,99 @@
+~ moreau_intro
+if main.lab_state == "start":
+	Moreau: Welcome to my island of failures.
+	Moreau: Most visitors simply call me Doctor Moreau.
+	Moreau: The creature created by Frankenstein escaped into the lower laboratory hours ago.
+	Moreau: Before leaving, I divided the access sequence among the minds wandering this facility.
+	Moreau: Listen carefully to the order.
+	Moreau: First, the observer from The War of the Worlds.
+	Moreau: Second, the voice born from the experiments of Dr Jekyll and Mr Hyde.
+	Moreau: Third... I know the number. I carved it into every beast before it learned to walk.
+	 Count the limbs that dragged across my operating table.
+	Moreau: Only then will the gate below reveal itself.
+	set main.lab_state = "find_clues"
+elif main.lab_state == "find_clues":
+	Moreau: Literature and science are closer than most people believe.
+=> END
+
+
+~ alien_talk
+Alien: Mars no longer interests us.
+Alien: Your world became far more entertaining after humans rewrote their own heavens.
+Alien: Once, your astronomers spoke proudly of nine wandering worlds.
+Alien: Then the smallest among them lost its throne.
+Alien: Tell me, human...
+Alien: After Pluto vanished from the count, how many remained beneath your sun?
+
+=> END
+
+
+~ jekyll_potions
+Narrator: Two strange potions bubble beside an old notebook labeled:
+Narrator: "The Strange Case of Dr Jekyll and Mr Hyde"
+
+Potion: I tried to separate the evil within mankind...
+
+Potion: But every experiment led to the same terrible conclusion.
+
+Potion: No matter how violently a soul divides itself...
+
+Potion: ...two selves always remain staring back from the mirror.
+
+=> END
+~ gate_terminal
+if main.lab_state == "start":
+	System:DOOR CLOSED. Speak with scientist Moreau first.
+	=> END
+	
+if main.lab_state == "find_clues":
+	System: ENTER SECURITY KEYCODE (3 DIGITS):
+	
+	- [Digit 1] -> 6
+		=> wrong_code
+	- [Digit 1] -> 7
+		=> wrong_code
+	- [Digit 1] -> 8
+		 => second_digit
+	- [Digit 1] -> 9
+		=> wrong_code
+=> END
+
+~ second_digit
+System: FIRST DIGIT CORRECT. ENTER SECOND DIGIT:
+- [Digit 2] -> 1
+	=> wrong_code
+- [Digit 2] -> 2
+	=> third_digit
+- [Digit 2] -> 3
+	=> wrong_code
+- [Digit 2] -> 4
+	=> wrong_code
+=> END
+
+~ third_digit
+System: SECOND DIGIT CORRECT. ENTER THIRD DIGIT:
+- [Digit 3] -> 3
+	=> wrong_code
+- [Digit 3] -> 4
+	System: CODE CORRECT. ACCESS GRANTED. OPENING HYDRAULIC BAY...
+	do openDoors()
+	set main.lab_state="open"
+	=> reactor_open
+	=> END
+- [Digit 3] -> 5
+	=> wrong_code
+- [Digit 3] -> 8
+	=> wrong_code
+=> END
+
+~ wrong_code
+System: [ERROR] INVALID KEYCODE. CONNECTION TERMINATED.
+=> END
+
+
+~ reactor_open
+Narrator: The blast door slowly opens with a violent metallic groan.
+Narrator: Cold air escapes from the darkness below.
+Narrator: Somewhere deep beneath the laboratory... something massive moves.
+Narrator: Something Frankenstein should never have built is waiting...
+=> END

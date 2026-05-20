@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://eu5eqxk0nws"
+path="res://.godot/imported/_The Lab_ - Sci-Fi_Horror Ambient Music - Copyright and Royalty Free.mp3-ea1ac13120e13a392ff9bada57bc3be3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Frankenstein/_The Lab_ - Sci-Fi_Horror Ambient Music - Copyright and Royalty Free.mp3"
+dest_files=["res://.godot/imported/_The Lab_ - Sci-Fi_Horror Ambient Music - Copyright and Royalty Free.mp3-ea1ac13120e13a392ff9bada57bc3be3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
