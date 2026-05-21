@@ -96,4 +96,5 @@ Narrator: The blast door slowly opens with a violent metallic groan.
 Narrator: Cold air escapes from the darkness below.
 Narrator: Somewhere deep beneath the laboratory... something massive moves.
 Narrator: Something Frankenstein should never have built is waiting...
+do GlobalData.go_to_next_scene()
 => END

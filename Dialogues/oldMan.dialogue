@@ -36,4 +36,6 @@ Hermit: Tell me, lad! How many limbs does that monster have?
 	=> END
 - It has 4 wooden arms.
 	Hermit: That's it! You've broken the enchantment! The path is yours!
+	do GlobalData.go_to_next_scene()
+=> END
 	=> END
