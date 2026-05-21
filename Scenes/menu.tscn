@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://dstngat3ty1by"]
+
+[ext_resource type="AudioStream" uid="uid://ccsuicranvrgj" path="res://Assets/The Achivists Key.mp3" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://ocy5ice841kk" path="res://Scripts/menu.gd" id="1_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://dw8tytyytp51v" path="res://Assets/backgroundArchivists.png" id="2_158mb"]
+[ext_resource type="Texture2D" uid="uid://cjc37l1m4jlfe" path="res://Assets/buttons2.png" id="3_158mb"]
+[ext_resource type="FontFile" uid="uid://n8rgukp35cf5" path="res://Assets/IMFellEnglish-Italic.ttf" id="4_wwsa2"]
+[ext_resource type="Texture2D" uid="uid://c0b0oh6t750ip" path="res://Assets/ninepatch_solo_marco.png" id="5_wwsa2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_158mb"]
+atlas = ExtResource("3_158mb")
+region = Rect2(134.56937, 432.74475, 365.58585, 186.81915)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwsa2"]
+atlas = ExtResource("3_158mb")
+region = Rect2(1035.3445, 440.3322, 375.2489, 181.98761)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsrd8"]
+atlas = ExtResource("3_158mb")
+region = Rect2(589.23315, 430.66913, 359.14374, 193.26123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbdvm"]
+atlas = ExtResource("3_158mb")
+region = Rect2(130.23775, 448.38477, 367.19635, 175.5456)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3rjx"]
+atlas = ExtResource("3_158mb")
+region = Rect2(1028.9025, 437.11118, 391.354, 194.87173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6swd7"]
+atlas = ExtResource("3_158mb")
+region = Rect2(576.34906, 441.9427, 384.91193, 183.5982)
+
+[node name="Menu" type="Control" unique_id=1275538759]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xhh6f")
+
+[node name="background" type="TextureRect" parent="." unique_id=2066711606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1154.0
+offset_bottom = 642.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_158mb")
+expand_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=569456825]
+stream = ExtResource("1_1rerr")
+autoplay = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=721651606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 493.0
+offset_top = 266.0
+offset_right = 858.0
+offset_bottom = 832.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="play" type="TextureButton" parent="VBoxContainer" unique_id=778129059]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_158mb")
+texture_pressed = SubResource("AtlasTexture_wwsa2")
+texture_hover = SubResource("AtlasTexture_jsrd8")
+
+[node name="Label" type="Label" parent="VBoxContainer/play" unique_id=1618026867]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 82.0
+offset_right = 231.0
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[node name="controls" type="TextureButton" parent="VBoxContainer" unique_id=440375289]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_158mb")
+texture_pressed = SubResource("AtlasTexture_wwsa2")
+texture_hover = SubResource("AtlasTexture_jsrd8")
+
+[node name="Label" type="Label" parent="VBoxContainer/controls" unique_id=735431167]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 82.0
+offset_right = 287.0
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 40
+text = "CONTROLS"
+
+[node name="exit" type="TextureButton" parent="VBoxContainer" unique_id=751676346]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_158mb")
+texture_pressed = SubResource("AtlasTexture_wwsa2")
+texture_hover = SubResource("AtlasTexture_jsrd8")
+
+[node name="Label" type="Label" parent="VBoxContainer/exit" unique_id=1371791527]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 84.0
+offset_right = 227.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+
+[node name="Controls" type="CanvasLayer" parent="." unique_id=225561072]
+unique_name_in_owner = true
+visible = false
+
+[node name="Panel" type="Panel" parent="Controls" unique_id=1872874272]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Controls/Panel" unique_id=1574707189]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 314.5
+offset_top = 214.0
+offset_right = 797.5
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_wwsa2")
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/Panel" unique_id=844637448]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 281.0
+offset_right = 788.0
+offset_bottom = 617.0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/Panel/MarginContainer" unique_id=1333263274]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Controls/Panel/MarginContainer/VBoxContainer" unique_id=1288057832]
+z_index = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 40
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/Panel/MarginContainer/VBoxContainer" unique_id=584749440]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Controls/Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=673881441]
+z_index = 4
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="Controls/Panel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=2120838928]
+z_index = 6
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 16
+text = "MOVES:"
+
+[node name="Label2" type="Label" parent="Controls/Panel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=691495040]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 15
+text = "WASD/ARROWS"
+
+[node name="Label3" type="Label" parent="Controls/Panel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1908125081]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 16
+text = "INTERACT:"
+
+[node name="Label4" type="Label" parent="Controls/Panel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=98057231]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wwsa2")
+text = "E"
+
+[node name="exitControls" type="TextureButton" parent="Controls/Panel" unique_id=764874700]
+z_index = 7
+layout_mode = 0
+offset_left = 482.0
+offset_top = 513.0
+offset_right = 849.0
+offset_bottom = 688.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 0
+texture_normal = SubResource("AtlasTexture_wbdvm")
+texture_pressed = SubResource("AtlasTexture_q3rjx")
+texture_hover = SubResource("AtlasTexture_6swd7")
+
+[node name="Label" type="Label" parent="Controls/Panel/exitControls" unique_id=1800421432]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 70.0
+offset_right = 228.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("4_wwsa2")
+theme_override_font_sizes/font_size = 35
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Controls/Panel/exitControls" to="." method="_on_exit_controls_pressed"]

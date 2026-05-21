@@ -5841,19 +5841,8 @@ radius = 24.470581
 size = Vector2(139, 86.5)
 
 [node name="Origin" type="Node2D" unique_id=218554707]
+process_mode = 3
 script = ExtResource("1_drvf5")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1193348428]
-
-[node name="fade_panel" type="ColorRect" parent="CanvasLayer" unique_id=1725973454]
-unique_name_in_owner = true
-z_index = 100
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.019607844, 0.019607844, 0.019607844, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=677800210]
 z_index = -3

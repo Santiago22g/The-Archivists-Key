@@ -12,5 +12,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			DialogueManager.show_example_dialogue_balloon(resource, title, [get_parent()])
 			
 			queue_free() 
-		else:
-			print("El jugador aún no sabe qué es el Cíclope, no lanzamos grito.")

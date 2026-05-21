@@ -17,6 +17,7 @@ Boy: In the "Origin," the seeker did not count the accidental visitors, but the 
 		Girl: Correct. The lineage is complete.
 		Boy: Look to the shore... the engine of the "Origin" is breathing again.
 		do setTrue()
+		do GlobalData.go_to_next_scene()
 		=> END
 	- It's 5.
 		Girl: You count ghosts and guests. The sea is not fooled.
