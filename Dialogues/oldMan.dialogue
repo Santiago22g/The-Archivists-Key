@@ -26,16 +26,31 @@ Babieca: Use your mind. Count its limbs and face the truth before it's too late.
 ~ ship
 Me: The Black Mark ship... the Hermit was right, it's destroyed.
 
+~ real_cyclops
+Cyclops: YOU THERE! STOP!
+Cyclops: I AM THE FEARSOME CYCLOPS THAT GUARDS THESE LANDS. NONE SHALL PASS!
+Cyclops: ...
+Cyclops: Well... actually the Temple is that way. I just guard this field.
+Cyclops: The REAL guardian is up on the hill. Good luck with... whatever that thing is.
+=> END
+
 => END
 ~ giant_shout
-Hermit: (Shouting from the distance) BEWARE! You are facing the Cyclops now! 
-Hermit: Tell me, lad! How many limbs does that monster have?
-
-- It has 2 limbs.
-	Hermit: Fool! The monster will crush you! Try again!
+Hermit: (Shouting from the distance) BEWARE! You are facing the Cyclops now!
+Hermit: Tell me, lad! How many limbs does that abomination possess?
+- One. It has one giant eye and two arms.
+	Hermit: Are you blind?! Count again before it crushes you!
 	=> END
-- It has 4 wooden arms.
-	Hermit: That's it! You've broken the enchantment! The path is yours!
+- Two. A body and a head.
+	Hermit: You are already dead if you think that! Look at its ARMS!
+	=> END
+- Four. Four great spinning arms.
+	Hermit: FOUR! Yes, FOUR cursed limbs that shattered the lance of Don Quixote himself!
+	Hermit: You have seen through its fury! The temple is yours, brave soul!
 	do GlobalData.go_to_next_scene()
+	=> END
+- I cannot count, it moves too fast!
+	Hermit: Then RUN! Come back when your eyes work, fool!
+	=> END
 => END
 	=> END

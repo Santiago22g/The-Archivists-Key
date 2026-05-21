@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://uf27ubdhvbr7" path="res://Dialogues/frankenstein.dialogue" id="11_kb0l8"]
 [ext_resource type="AudioStream" uid="uid://eu5eqxk0nws" path="res://Assets/Frankenstein/_The Lab_ - Sci-Fi_Horror Ambient Music - Copyright and Royalty Free.mp3" id="14_lxgw3"]
 [ext_resource type="Texture2D" uid="uid://cmicemk31sbfb" path="res://Assets/Frankenstein/SwampTroll.png" id="15_bsekd"]
+[ext_resource type="Texture2D" uid="uid://ua1rtqscph5t" path="res://Assets/Black.png" id="16_myxyy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5gl0"]
 atlas = ExtResource("1_w5gta")
@@ -1953,6 +1954,42 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_8wf0d"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uj6e1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jeleq"]
+_data = {
+&"Fade_out": SubResource("Animation_8wf0d"),
+&"RESET": SubResource("Animation_uj6e1")
+}
+
 [node name="Frankenstein" type="Node2D" unique_id=945900110]
 position = Vector2(0, 135)
 script = ExtResource("1_l1hvw")
@@ -2126,6 +2163,15 @@ sprite_frames = SubResource("SpriteFrames_lxgw3")
 animation = &"idle"
 autoplay = "idle"
 flip_h = true
+
+[node name="Black" type="Sprite2D" parent="." unique_id=127911056]
+position = Vector2(959.49994, 470)
+scale = Vector2(4.498047, 2.46875)
+texture = ExtResource("16_myxyy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Black" unique_id=2125121914]
+libraries/ = SubResource("AnimationLibrary_jeleq")
+autoplay = &"Fade_out"
 
 [connection signal="body_entered" from="moreau/Area2D" to="moreau" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="drJekyll/Area2D" to="drJekyll" method="_on_area_2d_body_entered"]

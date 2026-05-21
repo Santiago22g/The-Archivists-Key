@@ -31,6 +31,7 @@
 [ext_resource type="Script" uid="uid://c0xv7uknkdurk" path="res://Scripts/The Origin Of Species/node_2d.gd" id="28_1ua4f"]
 [ext_resource type="Resource" uid="uid://dvo2af6unfbon" path="res://Dialogues/hyena.dialogue" id="28_swd7o"]
 [ext_resource type="AudioStream" uid="uid://bisw4sly028pv" path="res://Assets/The Origin Of Species/Donkey Kong Country - Aquatic Ambience [Restored].mp3" id="31_gi03e"]
+[ext_resource type="Texture2D" uid="uid://ua1rtqscph5t" path="res://Assets/Black.png" id="32_77p84"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7iek5"]
 texture = ExtResource("1_e72pa")
@@ -5840,6 +5841,42 @@ radius = 24.470581
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn6xt"]
 size = Vector2(139, 86.5)
 
+[sub_resource type="Animation" id="Animation_8wf0d"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uj6e1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xm73l"]
+_data = {
+&"Fade_out": SubResource("Animation_8wf0d"),
+&"RESET": SubResource("Animation_uj6e1")
+}
+
 [node name="Origin" type="Node2D" unique_id=218554707]
 process_mode = 3
 script = ExtResource("1_drvf5")
@@ -6082,6 +6119,15 @@ texture = ExtResource("18_1urqa")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1585973841]
 stream = ExtResource("31_gi03e")
 autoplay = true
+
+[node name="Black" type="Sprite2D" parent="." unique_id=1151079100]
+position = Vector2(987, 321)
+scale = Vector2(6.875, 3.6640625)
+texture = ExtResource("32_77p84")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Black" unique_id=1562214435]
+libraries/ = SubResource("AnimationLibrary_xm73l")
+autoplay = &"Fade_out"
 
 [connection signal="body_entered" from="childrenBlueBird/Area2D" to="childrenBlueBird" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="hyena/Area2D" to="hyena" method="_on_area_2d_body_entered"]
