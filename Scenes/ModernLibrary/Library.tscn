@@ -10,7 +10,9 @@
 [ext_resource type="Script" uid="uid://bvye6uuuai5j7" path="res://Scripts/Library/mirror.gd" id="8_5c6pd"]
 [ext_resource type="PackedScene" uid="uid://chaec0xe66g5k" path="res://Scenes/ModernLibrary/FloatingPrompt.tscn" id="9_1kyf2"]
 [ext_resource type="Script" uid="uid://dbtksuvdtuv6j" path="res://Scripts/Library/clock_object.gd" id="10_afq3r"]
+[ext_resource type="Script" uid="uid://b4vwqdaqbeec1" path="res://Scripts/Library/door_object.gd" id="11_8qe81"]
 [ext_resource type="PackedScene" uid="uid://w3fxareejrmq" path="res://Scenes/ModernLibrary/clock_ui.tscn" id="11_jive8"]
+[ext_resource type="PackedScene" uid="uid://cwn8suf3xu1hu" path="res://Scenes/ModernLibrary/code_panel.tscn" id="13_hle7m"]
 
 [sub_resource type="Gradient" id="Gradient_241qb"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -322,6 +324,9 @@ region = Rect2(223.71513, 0, 32.101837, 49.99907)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qe81"]
 size = Vector2(95.5, 41)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uv0x"]
+size = Vector2(100, 95)
+
 [node name="Library" type="Node2D" unique_id=72035892]
 y_sort_enabled = true
 
@@ -559,18 +564,33 @@ z_index = 1
 position = Vector2(870, 323)
 shape = SubResource("RectangleShape2D_s6253")
 
-[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=900139220]
+[node name="DoorObject" type="StaticBody2D" parent="." unique_id=900139220]
 z_index = 2
+script = ExtResource("11_8qe81")
 
-[node name="door" type="Sprite2D" parent="StaticBody2D10" unique_id=1508010428]
+[node name="door" type="Sprite2D" parent="DoorObject" unique_id=1508010428]
 texture_filter = 1
 position = Vector2(566, 583.5)
 scale = Vector2(3.1874998, 2.55102)
 texture = SubResource("AtlasTexture_afq3r")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=2094540632]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorObject" unique_id=2094540632]
 position = Vector2(565.25, 620.5)
 shape = SubResource("RectangleShape2D_8qe81")
+
+[node name="FloatingPrompt" parent="DoorObject" unique_id=715419220 instance=ExtResource("9_1kyf2")]
+z_index = 3
+offset_left = 534.0
+offset_top = 507.0
+offset_right = 661.0
+offset_bottom = 590.0
+
+[node name="InteractionArea" type="Area2D" parent="DoorObject" unique_id=1869673397]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorObject/InteractionArea" unique_id=764243509]
+position = Vector2(566, 592.5)
+shape = SubResource("RectangleShape2D_3uv0x")
 
 [node name="ClockUI" parent="." unique_id=1094794536 instance=ExtResource("11_jive8")]
 visible = false
@@ -578,7 +598,13 @@ z_index = 4
 dialogue_resource = ExtResource("5_5c6pd")
 dialogue_title = "time"
 
+[node name="CodePanel" parent="." unique_id=1254265311 instance=ExtResource("13_hle7m")]
+visible = false
+z_index = 5
+
 [connection signal="body_entered" from="StaticBody2D2/InteractionArea" to="StaticBody2D2" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="StaticBody2D2/InteractionArea" to="StaticBody2D2" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="ClockObject/InteractionArea" to="ClockObject" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="ClockObject/InteractionArea" to="ClockObject" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="DoorObject/InteractionArea" to="DoorObject" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="DoorObject/InteractionArea" to="DoorObject" method="_on_interaction_area_body_exited"]
