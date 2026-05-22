@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://0cpnpc3wawv6"]
+[gd_scene format=3 uid="uid://bq7fst1s2ycv3"]
 
-[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_r18jl"]
+[ext_resource type="Script" uid="uid://dlxsalft53lr7" path="res://Scripts/credits.gd" id="1_r18jl"]
 [ext_resource type="Texture2D" uid="uid://bxr1gm0seaw73" path="res://Assets/godot.png" id="2_gryuy"]
 [ext_resource type="AudioStream" uid="uid://dj8svankyswx7" path="res://Assets/creditsMusic.mp3" id="3_ccovl"]
 

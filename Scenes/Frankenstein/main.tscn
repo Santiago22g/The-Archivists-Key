@@ -2157,7 +2157,7 @@ stream = ExtResource("14_lxgw3")
 autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1956313265]
-position = Vector2(918.00006, 777.00006)
+position = Vector2(765.00006, 705)
 scale = Vector2(7.9999995, 10.312499)
 sprite_frames = SubResource("SpriteFrames_lxgw3")
 animation = &"idle"

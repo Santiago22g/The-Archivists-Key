@@ -16,4 +16,4 @@ func go_to_next_scene() -> void:
 	if current_scene_index < SCENES.size():
 		get_tree().change_scene_to_file(SCENES[current_scene_index])
 	else:
-		get_tree().change_scene_to_file("res://Scenes/UI/WinScene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
